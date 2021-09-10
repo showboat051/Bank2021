@@ -29,9 +29,12 @@ public class BankAccount {
         this.previousTransaction = previousTransaction;
     }
 
-    public void init() {
+    static void init() {
         System.out.println("Hello and Welcome");
+        System.out.println("What would you like to do?");
     }
+
+
 
 
 
