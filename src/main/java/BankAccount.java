@@ -35,18 +35,33 @@ public class BankAccount {
         System.out.println("Hello and Welcome");
         Scanner scan = new Scanner(System.in);
         System.out.println("What would you like to do?");
+        System.out.println("Press d to deposit funds");
+        System.out.println("Press w to withdraw funds");
 
         String input = scan.nextLine();
 
-        if(input.equals("d")){
-            deposit();
-        } // end of if statement
+        switch(input) {
+            case "d":
+                deposit();
+                break;
+            case "w":
+                withdraw();
+                break;
+        }
 
     } // init()
 
     static void deposit() {
-        System.out.println("the deposit will run here");
-    }
+
+        Scanner scanInt = new Scanner(System.in);
+        System.out.println("How much would you like to deposit?");
+        int amt = scanInt.nextInt();
+        System.out.println("You have deposited " + amt + " dollars");
+    } // deposit()
+
+    static void withdraw() {
+        System.out.println("How much would you like to withdraw");
+    } // withdraw()
 
 
 
