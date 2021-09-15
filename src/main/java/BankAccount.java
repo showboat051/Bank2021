@@ -33,9 +33,20 @@ public class BankAccount {
 
     static void init() {
         System.out.println("Hello and Welcome");
+        Scanner scan = new Scanner(System.in);
         System.out.println("What would you like to do?");
-    }
 
+        String input = scan.nextLine();
+
+        if(input.equals("d")){
+            deposit();
+        } // end of if statement
+
+    } // init()
+
+    static void deposit() {
+        System.out.println("the deposit will run here");
+    }
 
 
 
