@@ -52,11 +52,33 @@ public class BankAccount {
     } // init()
 
     static void deposit() {
-
         Scanner scanInt = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
+        int initBal = 0;
+        System.out.println("Your initial balance is " + initBal);
         System.out.println("How much would you like to deposit?");
-        int amt = scanInt.nextInt();
-        System.out.println("You have deposited " + amt + " dollars");
+
+        int depositAmt = scanInt.nextInt();
+        int newBal = depositAmt + initBal;
+
+        System.out.println("You have deposited " + depositAmt + " dollars");
+        System.out.println("Now your balance is " + newBal );
+        System.out.println("Would you like to make another deposit or withdraw? ");
+
+        String input = scan.nextLine();
+
+        switch(input) {
+            case "d":
+                deposit();
+                break;
+            case "w":
+                withdraw();
+                break;
+
+            case "e":
+                break;
+        }
+
     } // deposit()
 
     static void withdraw() {
