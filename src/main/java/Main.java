@@ -2,6 +2,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        BankAccount.init();
+        BankAccount ba = new BankAccount();
+        ba.init();
     }
 }

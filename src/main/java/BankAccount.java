@@ -31,7 +31,7 @@ public class BankAccount {
         this.previousTransaction = previousTransaction;
     }
 
-    static void init() {
+    public void init() {
         System.out.println("Hello and Welcome");
         Scanner scan = new Scanner(System.in);
         System.out.println("What would you like to do?");
@@ -51,18 +51,15 @@ public class BankAccount {
 
     } // init()
 
-    static void deposit() {
+    public void deposit() {
         Scanner scanInt = new Scanner(System.in);
         Scanner scan = new Scanner(System.in);
-        int initBal = 0;
-        System.out.println("Your initial balance is " + initBal);
         System.out.println("How much would you like to deposit?");
 
         int depositAmt = scanInt.nextInt();
-        int newBal = depositAmt + initBal;
-
+        balance = balance + depositAmt;
         System.out.println("You have deposited " + depositAmt + " dollars");
-        System.out.println("Now your balance is " + newBal );
+        System.out.println("Your new balance is " + balance);
         System.out.println("Would you like to make another deposit or withdraw? ");
 
         String input = scan.nextLine();
