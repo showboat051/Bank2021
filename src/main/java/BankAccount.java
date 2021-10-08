@@ -78,8 +78,19 @@ public class BankAccount {
 
     } // deposit()
 
-    static void withdraw() {
+    public void withdraw() {
+
+
         System.out.println("How much would you like to withdraw");
+        Scanner scanAmt = new Scanner(System.in);
+        int withdrawAmt = scanAmt.nextInt();
+        balance = balance - withdrawAmt;
+        System.out.println("You have withdrawn " + withdrawAmt + " dollars");
+        System.out.println("Your new balance is " + balance);
+        System.out.println("What else would you like to do? ");
+
+
+
     } // withdraw()
 
 
