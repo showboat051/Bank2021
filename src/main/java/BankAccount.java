@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class BankAccount {
@@ -83,14 +84,28 @@ public class BankAccount {
 
         System.out.println("How much would you like to withdraw");
         Scanner scanAmt = new Scanner(System.in);
+        Scanner resp = new Scanner(System.in);
+
         int withdrawAmt = scanAmt.nextInt();
         balance = balance - withdrawAmt;
         System.out.println("You have withdrawn " + withdrawAmt + " dollars");
         System.out.println("Your new balance is " + balance);
-        System.out.println("What else would you like to do? ");
+        System.out.println("Would you like to make another transaction? ");
+
+        String inputs = resp.nextLine();
+
+        switch (inputs) {
+            case "d":
+                deposit();
+                break;
+                case "w":
+                withdraw();
+                break;
+                case "e":
+                break;
 
 
-
+        }
     } // withdraw()
 
 
